@@ -1,4 +1,4 @@
-FROM jupyter/minimal-notebook:latest
+FROM bitnami/jupyterhub:latest
 
 # Switch to the root user so we can install additional packages.
 
