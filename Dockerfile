@@ -31,7 +31,7 @@ LABEL io.k8s.description="S2I builder for Jupyter (minimal-notebook)." \
 # Copy in S2I builder scripts for installing Python packages and copying
 # in of notebooks and data files.
 
-COPY s2i /opt/app-root/s2i
+#COPY s2i /opt/app-root/s2i
 
 # Adjust permissions on home directory so writable by group root.
 
