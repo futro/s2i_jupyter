@@ -34,11 +34,13 @@ EXPOSE 8080
 RUN set -ex \
    && conda install --quiet --yes \
    # choose the Python packages you need
-   'plotly==4.9.0' \
-   'folium==0.11.0' \
+   'tensorflow==2.2.0' \
+   'tensorflow_probability==0.10.1' \
+   'sklearn' \
+   'boto3'
    && conda clean --all -f -y \
    # install Jupyter Lab extensions you need
-   && jupyter labextension install jupyterlab-plotly@4.9.0 --no-build \
+  # && jupyter labextension install jupyterlab-plotly@4.9.0 --no-build \
    && jupyter lab build -y \
    && jupyter lab clean -y \
    && rm -rf "/home/${NB_USER}/.cache/yarn" \
