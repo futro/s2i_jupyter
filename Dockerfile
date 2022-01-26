@@ -1,7 +1,7 @@
 FROM python:3.7-slim-buster
 
 
-#USER root
+USER root
 
 RUN apt update && \
     apt install -y --no-install-recommends \
