@@ -14,12 +14,11 @@ RUN pip3 install --upgrade pip && \
 #                 gunicorn marshmallow webargs requests cloudpickle confluent-kafka kafka-python \
 #                 tensorflow==2.2.0 tensorflow_probability==0.10.1 \
 #                 mlflow boto3 psycopg2 sklearn jupyter --no-cache-dir --user
-    pip3 install jupyter 
-    # --no-cache-dir --user
+    pip3 install jupyter --no-cache-dir --user
  # Port
 EXPOSE 8080
 
-#ENV PATH=/root/.local/bin:${PATH}
+ENV PATH=/root/.local/bin:${PATH}
 
 CMD ["jupyter", "notebook", "--port=8080", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
 #RUN jupyter notebook --port=8080 --no-browser --ip=0.0.0.0 --allow-root
