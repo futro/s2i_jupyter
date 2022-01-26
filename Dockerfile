@@ -20,4 +20,4 @@ RUN pip3 install --upgrade pip && \
 EXPOSE 8080
 
 #CMD ["jupyter", "notebook", "--port=8080", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
-RUN jupyter notebook --port=8080 --no-browser --ip=0.0.0.0 --allow-root
+RUN python3 -m jupyter notebook --port=8080 --no-browser --ip=0.0.0.0 --allow-root
