@@ -5,7 +5,7 @@ USER root
 
 RUN apt update && \
     apt install -y --no-install-recommends \
-                   sudo python3-dev python3-pip && apt-get install libpq-dev &&\
+                   sudo python3-dev python3-pip && apt-get install libpq-dev -y --no-install-recommends &&\
     apt autoremove -y && \
     rm -rf /var/lib/apt/lists/* 
 
