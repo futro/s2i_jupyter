@@ -28,6 +28,9 @@
 
 FROM jupyter/tensorflow-notebook
 
+sudo chown -R user:user ~/.local/share/jupyter 
+
+
 
 EXPOSE 8080
 
