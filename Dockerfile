@@ -26,26 +26,8 @@
 
 ######
 
-FROM jupyter/scipy-notebook
+FROM jupyter/tensorflow-notebook
 
 
 EXPOSE 8080
-
-RUN set -ex \
-  # && conda config --append channels conda-forge \
-   && conda install --quiet --yes -c conda-forge\
-   # choose the Python packages you need
-   'tensorflow==2.2.0' \
-   'tensorflow_probability==0.10.1' 
-  # 'sklearn' \
-  # 'boto3'
-   && conda clean --all -f -y \
-   # install Jupyter Lab extensions you need
-  # && jupyter labextension install jupyterlab-plotly@4.9.0 --no-build \
-   && jupyter lab build -y \
-   && jupyter lab clean -y \
-   && rm -rf "/home/${NB_USER}/.cache/yarn" \
-   && rm -rf "/home/${NB_USER}/.node-gyp" \
-   && fix-permissions "${CONDA_DIR}" \
-   && fix-permissions "/home/${NB_USER}"
 
