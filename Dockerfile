@@ -32,6 +32,7 @@ FROM jupyter/scipy-notebook
 EXPOSE 8080
 
 RUN set -ex \
+   && conda config --append channels conda-forge \
    && conda install --quiet --yes \
    # choose the Python packages you need
    'tensorflow==2.2.0' \
