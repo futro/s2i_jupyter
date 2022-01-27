@@ -36,9 +36,9 @@ RUN set -ex \
    && conda install --quiet --yes -c conda-forge\
    # choose the Python packages you need
    'tensorflow==2.2.0' \
-   'tensorflow_probability==0.10.1' \
-   'sklearn' \
-   'boto3'
+   'tensorflow_probability==0.10.1' 
+  # 'sklearn' \
+  # 'boto3'
    && conda clean --all -f -y \
    # install Jupyter Lab extensions you need
   # && jupyter labextension install jupyterlab-plotly@4.9.0 --no-build \
