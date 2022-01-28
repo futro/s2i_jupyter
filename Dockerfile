@@ -20,7 +20,8 @@ EXPOSE 8080
 
 #ENV PATH=/root/.local/bin:${PATH}
 
-CMD ["jupyter", "notebook", "--port=8080", "--no-browser", "--ip=0.0.0.0"] #, "--allow-root"
+CMD ["jupyter", "notebook", "--port=8080", "--no-browser", "--ip=0.0.0.0"] 
+#, "--allow-root"
 #RUN jupyter notebook --port=8080 --no-browser --ip=0.0.0.0 --allow-root
 
 
