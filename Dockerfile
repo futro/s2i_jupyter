@@ -25,7 +25,8 @@ EXPOSE 8080
 #ENV PATH=/root/.local/bin:${PATH}
 
 RUN chgrp -R 0 /maas && \
-    chmod -R 777 /maas
+    chmod -R 777 /maas && \
+    cd /maas
 
 CMD ["jupyter", "notebook", "--port=8080", "--no-browser", "--ip=0.0.0.0"] 
 #, "--allow-root"
