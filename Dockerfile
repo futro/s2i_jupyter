@@ -3,9 +3,9 @@ FROM python:3.7-slim-buster
 
 #USER root
 
-RUN mkdir maas
+RUN mkdir /maas
 
-WORKDIR maas
+WORKDIR /maas
 
 RUN apt update && \
     apt install -y --no-install-recommends \
@@ -24,8 +24,8 @@ EXPOSE 8080
 
 #ENV PATH=/root/.local/bin:${PATH}
 
-RUN chgrp -R 0 maas && \
-    chmod -R g+rwX maas
+RUN chgrp -R 0 /maas && \
+    chmod -R g+rwX /maas
 
 CMD ["jupyter", "notebook", "--port=8080", "--no-browser", "--ip=0.0.0.0"] 
 #, "--allow-root"
