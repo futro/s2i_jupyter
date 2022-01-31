@@ -28,7 +28,7 @@ RUN chgrp -R 0 /maas && \
     chmod -R 777 /maas && \
     cd /maas
 
-RUN ls -lisa /.local
+RUN ls -lisa /
 
 CMD ["jupyter", "notebook", "--port=8080", "--no-browser", "--ip=0.0.0.0"] 
 #, "--allow-root"
