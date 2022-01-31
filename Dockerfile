@@ -1,7 +1,7 @@
 FROM python:3.7-slim-buster
 
 
-#USER root
+USER root
 
 RUN mkdir /maas
 
@@ -28,9 +28,8 @@ RUN chgrp -R 0 /maas && \
     chmod -R 777 /maas && \
     cd /maas
 
-RUN chmod -R 777 /
 
-CMD ["jupyter", "notebook", "--port=8080", "--no-browser", "--ip=0.0.0.0"] 
+CMD ["sudo", "jupyter", "notebook", "--port=8080", "--no-browser", "--ip=0.0.0.0"] 
 #, "--allow-root"
 #RUN jupyter notebook --port=8080 --no-browser --ip=0.0.0.0 --allow-root
 
