@@ -3,6 +3,10 @@ FROM python:3.7-slim-buster
 
 #USER root
 
+RUN mkdir maas
+
+WORKDIR maas
+
 RUN apt update && \
     apt install -y --no-install-recommends \
                    sudo python3-dev python3-pip &&\
@@ -19,6 +23,9 @@ RUN pip3 install --upgrade pip && \
 EXPOSE 8080
 
 #ENV PATH=/root/.local/bin:${PATH}
+
+RUN chgrp -R 0 maas && \
+    chmod -R g+rwX maas
 
 CMD ["jupyter", "notebook", "--port=8080", "--no-browser", "--ip=0.0.0.0"] 
 #, "--allow-root"
