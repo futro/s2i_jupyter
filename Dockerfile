@@ -30,7 +30,7 @@ RUN chgrp -R 0 /home/jovyan/ && \
 #    cd /maas
 
 
-CMD ["jupyter", "notebook", "--port=8080", "--no-browser", "--ip=0.0.0.0"] 
+CMD ["jupyter", "notebook", "-p 8080:8080", "--no-browser", "--ip=0.0.0.0"] 
 #, "--allow-root"
 #RUN jupyter notebook --port=8080 --no-browser --ip=0.0.0.0 --allow-root
 
