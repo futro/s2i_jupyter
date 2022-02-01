@@ -26,7 +26,7 @@ EXPOSE 8080
 #ENV PATH=/root/.local/bin:${PATH}
 
 RUN chgrp -R 0 /home/jovyan/ && \
-    chmod -R g+rwX /home/jovyan/  && \
+    chmod -R g+rwX /home/jovyan/ # && \
 #    cd /maas
 
 
