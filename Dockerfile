@@ -2,7 +2,7 @@
 
 FROM jupyter/tensorflow-notebook
 
-#USER root
+USER root
 
 #RUN mkdir /maas
 
