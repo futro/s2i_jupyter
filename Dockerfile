@@ -23,7 +23,7 @@ USER root
  # Port
 EXPOSE 8080
 
-RUN pip3 install -y confluent-kafka kafka-python --user
+RUN pip3 install confluent-kafka kafka-python --user
 
 #ENV PATH=/root/.local/bin:${PATH}
 
