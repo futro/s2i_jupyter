@@ -23,7 +23,7 @@ USER root
  # Port
 EXPOSE 8080
 
-RUN conda install -y confluent-kafka kafka-python psycopg2
+RUN conda install -y confluent-kafka kafka-python
 
 #ENV PATH=/root/.local/bin:${PATH}
 
