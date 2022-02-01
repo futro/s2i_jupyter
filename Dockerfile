@@ -23,6 +23,8 @@ USER root
  # Port
 EXPOSE 8080
 
+RUN conda install -y confluent-kafka kafka-python psycopg2
+
 #ENV PATH=/root/.local/bin:${PATH}
 
 RUN chgrp -R 0 /home/jovyan/ && \
