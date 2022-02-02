@@ -28,14 +28,14 @@ RUN pip3 install confluent-kafka kafka-python --user
 #ENV PATH=/root/.local/bin:${PATH}
 
 RUN chgrp -R 0 /home/jovyan/ && \
-    chmod -R g+rwX /home/jovyan/ # && \
-#    cd /maas
+    chmod -R g+rwX /home/jovyan/ 
+    # && \
+#   cd /maas
 
 
 RUN echo "c.NotebookApp.token = '7f2e30bbad3eda5709ca54f91d6aa653ca2ea065caa9bde1'" > /home/jovyan/jupyter_notebook_config.py
 RUN echo "c.NotebookApp.password = u'7f2e30bbad3eda5709ca54f91d6aa653ca2ea065caa9bde1'" >> /home/jovyan/jupyter_notebook_config.py
 
-,
 CMD ["jupyter", "notebook", "-p" ,"8080:8080", "--no-browser", "--ip=0.0.0.0"] 
 #, "--allow-root"
 #RUN jupyter notebook --port=8080 --no-browser --ip=0.0.0.0 --allow-root
