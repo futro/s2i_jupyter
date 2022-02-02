@@ -32,7 +32,7 @@ RUN chgrp -R 0 /home/jovyan/ && \
 #    cd /maas
 
 
-CMD ["jupyter", "notebook", "-p 8080:8080", "--no-browser", "--ip=0.0.0.0", "--NotebookApp.token='maasToken'"] 
+CMD ["jupyter", "notebook", "-p 8080:8080", "--no-browser", "--ip=0.0.0.0", "--NotebookApp.token='maasToken'", "--NotebookApp.password='maasToken'"] 
 #, "--allow-root"
 #RUN jupyter notebook --port=8080 --no-browser --ip=0.0.0.0 --allow-root
 
