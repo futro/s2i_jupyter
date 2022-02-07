@@ -23,7 +23,7 @@ USER root
  # Port
 EXPOSE 8080
 
-RUN apt install libpq-dev
+RUN sudo apt install libpq-dev
 RUN pip3 install confluent-kafka kafka-python flask flask-restful gunicorn marshmallow webargs requests mlflow boto3 psycopg2 tensorflow_probability==0.10.1 --user
 
 #ENV PATH=/root/.local/bin:${PATH}
